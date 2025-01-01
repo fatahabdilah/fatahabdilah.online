@@ -1,0 +1,458 @@
+:root {
+    --ff-base: "Montserrat", sans-serif;
+    --ff-accent: "Yeseva One", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    font-family: var(--ff-base);
+    line-height: 1.25;
+}
+
+#app {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    width: 100vw;
+    top: 0;
+    transition: 2s;
+    box-shadow: 1px 1px 1px black;
+}
+
+#app #loading span {
+    opacity: 0;
+}
+
+#app #loading span:nth-child(1) {
+    animation: one 4s infinite steps(1);
+}
+
+#app #loading span:nth-child(2) {
+    animation: two 4s infinite steps(1);
+}
+
+#app #loading span:nth-child(3) {
+    animation: three 4s infinite steps(1);
+}
+
+#app #loading span:nth-child(4) {
+    animation: four 4s infinite steps(1);
+}
+
+@keyframes one {
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes two {
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes three {
+    60% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes four {
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.headernav {
+    background-color: white;
+    display: grid;
+    grid-template-areas: 'header header'
+        'nav nav';
+    height: 100vh;
+    grid-template-rows: 1fr 1fr;
+    padding: 7.5% 10%;
+}
+
+header {
+    grid-area: header;
+    align-self: end;
+}
+
+header h1 span {
+    font-weight: 600;
+}
+
+header p {
+    margin: 0.5em 0 2em 0;
+}
+
+.navheader {
+    grid-area: nav;
+    font-family: var(--ff-accent);
+    font-size: 10vw;
+    letter-spacing: 0.1em;
+    line-height: 0.75em;
+}
+
+.navheader ul {
+    display: grid;
+    gap: 0.5em;
+}
+
+.navheader ul li a {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.navheader ul li a:hover {
+    transform: skewX(-16deg) translateX(0.1em);
+}
+
+section {
+    top: 100vh;
+    transition: 0.6s;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    background-color: black;
+    color: white;
+    display: none;
+    place-content: center;
+    padding: 5% 10%;
+}
+
+.navmenu {
+    max-width: 700px;
+    position: fixed;
+    width: 100%;
+    justify-self: center;
+}
+
+.navmenu ul {
+    margin-left: -0.5em;
+    margin-top: calc(1em + 5vw);
+    gap: 0.5em;
+    flex-direction: row-reverse;
+    rotate: -90deg;
+    display: inline-flex;
+}
+
+.navmenu ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: start;
+}
+
+.navmenu ul li a {
+    font-weight: 100;
+    transition: 0.3s;
+}
+
+.navmenu ul li span {
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: 0.4s;
+    position: absolute;
+}
+
+.navmenu ul li a:hover {
+    transform: skewX(-16deg) translateX(0.2em);
+}
+
+#about .wraper {
+    display: grid;
+    gap: 2em;
+    max-width: 500px;
+}
+
+#about .wraper .aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .wraper .aboutme h2 {
+    font-family: var(--ff-accent);
+    font-size: clamp(2em, 10vw, 4em);
+}
+
+#about .wraper .aboutme img {
+    width: clamp(5em, 25vw, 7.5em);
+    border-radius: 50%;
+}
+
+#about .wraper div {
+    display: grid;
+    gap: 0.5em;
+}
+
+#about .wraper div h3 {
+    font-family: var(--ff-accent);
+}
+
+#about .wraper div p {
+    text-align: justify;
+}
+
+#about .wraper .education ul {
+    display: grid;
+    gap: 0.5rem;
+}
+
+#about .wraper .education ul li a {
+    text-decoration: underline;
+}
+
+#about .wraper .education ul li a:hover {
+    text-decoration: line-through;
+}
+
+#about .wraper .education ul li p i {
+    font-style: italic;
+}
+
+#experience {
+    padding: 0;
+}
+
+#experience .navmenu {
+    max-width: none;
+    width: 80%;
+    /*dari padding .wrkprj*/
+}
+
+#experience .navmenu ul {
+    margin-top: calc(3.5em + 5vw);
+    margin-left: -5.25em;
+}
+
+#experience .wraper {
+    display: grid;
+    grid-template-rows: 100vh 100vh;
+}
+
+#experience .wraper .wrkprj {
+    padding: 7.5% 10%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#experience .wraper .wrkprj div {
+    align-content: end;
+    display: grid;
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+#experience .wraper .wrkprj div h2 {
+    font-weight: 500;
+}
+
+#experience .wraper .wrkprj div p {
+    text-align: justify;
+}
+
+#experience .wraper .wrkprj ul {
+    display: grid;
+    align-content: start;
+    gap: 1em;
+}
+
+#experience .wraper .wrkprj ul li {
+    display: grid;
+    gap: 0.25rem;
+}
+
+#experience .wraper .wrkprj ul li a {
+    font-size: 10vw;
+    line-height: 0.75em;
+    font-family: var(--ff-accent);
+    transition: 0.3s;
+    width: fit-content;
+}
+
+#experience .wraper .wrkprj ul li a:hover {
+    transform: skewX(-16deg) translateX(0.1em);
+}
+
+.active {
+    color: grey;
+}
+
+#skills {
+    padding: 0 10%;
+    place-content: center;
+    gap: 2rem;
+}
+
+#skills .myce h2 {
+    font-weight: 550;
+}
+
+#skills .myskills {
+    display: grid;
+    gap: 0.5rem;
+    align-self: end;
+}
+
+#skills .certification {
+    display: grid;
+    gap: 0.5rem;
+    align-self: start;
+}
+
+#skills .myresume {
+
+    justify-self: center;
+    border: 1px solid rgba(255, 255, 255, 0.219);
+    font-family: var(--ff-accent);
+    overflow: hidden;
+    display: flex;
+    gap: 2em;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    width: 7.8em;
+}
+
+#skills .myresume span {
+    text-wrap: nowrap;
+}
+
+#skills .myresume:hover span {
+    animation: lefttoright 3s infinite linear;
+}
+
+@keyframes lefttoright {
+    from {
+        transform: translateX(-135%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+#contact .contactme {
+    display: grid;
+    gap: 1rem;
+    max-width: 550px;
+}
+
+#contact .contactme h2 {
+    font-family: var(--ff-accent);
+    font-size: clamp(2rem, 9vw, 3rem);
+}
+
+#contact .contactme .pjustify {
+    text-align: justify;
+}
+
+#contact .contactme p a {
+    text-decoration: underline;
+}
+
+#contact .contactme p a:hover {
+    text-decoration: line-through;
+}
+
+.cursor {
+    display: none;
+    position: fixed;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.1s;
+    margin-left: -0.45em;
+    margin-top: -0.45em;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.cursor.hovered {
+    transform: scale(5);
+}
+
+/* mobile M */
+@media(min-width : 375px) {}
+
+/* mobile L */
+@media(min-width : 425px) {}
+
+/* Tablet */
+@media(min-width : 768px) {}
+
+/* Laptop */
+@media(min-width : 1024px) {}
+
+@media (orientation: portrait) {}
+
+@media (orientation: landscape) {
+    .headernav {
+        grid-template-areas: 'header nav'
+            'header nav';
+        align-items: end;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
+
+    .headernav header p {
+        margin-bottom: 0;
+    }
+
+    .headernav nav {
+        font-size: 7vw;
+        justify-self: end;
+    }
+
+    #experience .wraper .wrkprj {
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        align-items: end;
+        grid-template-rows: none;
+    }
+
+    #experience .wraper .wrkprj ul li a {
+        font-size: 6vw;
+    }
+
+    #experience .wraper .wrkprj div {
+        padding-bottom: 0;
+    }
+
+    #experience .wraper .wrkprj ul {
+        gap: 2em;
+    }
+}
+
+@media (hover: hover) {
+    .cursor {
+        display: block;
+    }
+}
