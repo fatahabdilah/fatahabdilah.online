@@ -26,7 +26,43 @@
     <div class="headernav">
         <header>
             <h1>HI, I AM <span>FATAH ABDILAH</span></h1>
-            <p>Front-end Website Developer and Lifelong Learner.</p>
+            <!-- <p class="typing-container">Front-end Website Developer and Lifelong Learner.</p> -->
+
+
+
+            <p id="demo"></p><span id="blinking-cursor">|</span>
+
+            <script>
+                // Fungsi untuk memulai animasi typewriter
+                function startTypewriter() {
+                    var i = 0;
+                    var txt = 'Front-end Website Developer and Lifelong Learner.';
+                    var speed = 100; // Kecepatan pengetikan
+                    var blinkingCursor = document.getElementById("blinking-cursor");
+
+                    function typeWriter() {
+                        if (i < txt.length) {
+                            document.getElementById("demo").innerHTML += txt.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, speed);
+                        } else {
+                            blinkingCursor.classList.add("blinking"); // Mengaktifkan animasi kedip setelah selesai mengetik
+                        }
+                    }
+
+                    typeWriter(); // Memulai pengetikan
+                }
+
+                // Menunggu sampai proses loading selesai, lalu memulai animasi
+                window.addEventListener('load', function () {
+                    setTimeout(() => {
+                        startTypewriter(); // Mulai animasi typewriter setelah loading selesai
+                    }, 5000); // Pastikan waktu ini sinkron dengan loading
+                });
+            </script>
+
+
+
         </header>
         <nav class="navheader">
             <ul>

@@ -456,3 +456,27 @@ section {
         display: block;
     }
 }
+
+
+
+
+
+
+#blinking-cursor {
+    display: inline;
+    /* Tidak ada jarak dengan teks */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#blinking-cursor.blinking {
+    animation: blink 1s step-end infinite;
+}
+
+#demo {
+    display: inline;
+}
