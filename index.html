@@ -36,7 +36,7 @@
                 // Fungsi untuk memulai animasi typewriter
                 function startTypewriter() {
                     var i = 0;
-                    var txt = 'Front-end Website Developer and Lifelong Learner.';
+                    var txt = 'UI/UX Designer and Front-end Website Developer.';
                     var speed = 100; // Kecepatan pengetikan
                     var blinkingCursor = document.getElementById("blinking-cursor");
 
@@ -65,11 +65,53 @@
 
         </header>
         <nav class="navheader">
-            <ul>
+            <!-- <ul>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#experience">EXPERIENCE</a></li>
                 <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
+            </ul> -->
+            <ul>
+                <li>
+                    <a href="#about" class="link">
+                        <span class="mask">
+                            <div class="link-container">
+                                <span class="link-title1 title">ABOUT</span>
+                                <span class="link-title2 title">ABOUT</span>
+                            </div>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" class="link">
+                        <span class="mask">
+                            <div class="link-container">
+                                <span class="link-title1 title">EXPERIENCE</span>
+                                <span class="link-title2 title">EXPERIENCE</span>
+                            </div>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="link">
+                        <span class="mask">
+                            <div class="link-container">
+                                <span class="link-title1 title">SKILLS</span>
+                                <span class="link-title2 title">SKILLS</span>
+                            </div>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="link">
+                        <span class="mask">
+                            <div class="link-container">
+                                <span class="link-title1 title">CONTACT</span>
+                                <span class="link-title2 title">CONTACT</span>
+                            </div>
+                        </span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -81,7 +123,7 @@
         </nav>
         <div class="wraper">
             <div class="aboutme">
-                <h2>About Me</h2>
+                <h2 class="glitch" data-text="About Me">About Me</h2>
                 <img src="asset/Fatah Abdilah.png" alt="Fatah Abdilah">
             </div>
             <div class="hi">
@@ -98,7 +140,7 @@
                 <ul>
                     <li>
                         <p>
-                            <a href="https://unpam.ac.id/" target="_blank">Universitas Pamulang</a>
+                            <a href="https://unpam.ac.id/" target="_blank" class="linkbiru">Universitas Pamulang</a>
                             <br>
                             <i>Informatics Engineering</i>
                             <br>
@@ -107,7 +149,8 @@
                     </li>
                     <li>
                         <p>
-                            <a href="https://smkn1tengaran.sch.id/" target="_blank">Smk Negeri 1 Tengaran</a>
+                            <a href="https://smkn1tengaran.sch.id/" target="_blank" class="linkbiru">Smk Negeri 1
+                                Tengaran</a>
                             <br>
                             <i>Software Engineering</i>
                             <br>
@@ -134,14 +177,19 @@
                         skills every day.
                     </p>
                 </div>
-                <ul>
+                <ul style="overflow: auto;height: 100%">
+
                     <li>
-                        <a href="" style="pointer-events: none;">Potatos Studio</a>
-                        <p>-FRONT END WEB DEVELOPER / Intern</p>
+                        <a href="" style="pointer-events: ;" class="linkmiring">WEBDEV.CO.ID</a>
+                        <p>- Website Developer / Part Time</p>
                     </li>
                     <li>
-                        <a href="" style="pointer-events: none;">GRIDUTA</a>
-                        <p>-WEB CONTENT UPLOADER / Intern</p>
+                        <a href="" style="pointer-events: ;" class="linkmiring">FILKOM UNPAM</a>
+                        <p>- Website Administrator / Intern</p>
+                    </li>
+                    <li>
+                        <a href="" style="pointer-events: ;" class="linkmiring">GRIDUTA</a>
+                        <p>- Software Developer / Intern</p>
                     </li>
                 </ul>
             </div>
@@ -151,8 +199,23 @@
                     <p>I dedicate myself to creating web development projects that provide solutions and are easy to
                         use.</p>
                 </div>
-                <ul>
-                    <li><a href="" style="pointer-events: none;">Lorem ipsum</a></li>
+                <ul style="overflow: auto;height: 100%">
+                    <li>
+                        <a href="" style=" pointer-events: ;">MPI UNPAM</a>
+                        <p>- Wordpress</p>
+                    </li>
+                    <li><a href="" style="pointer-events: ;">FILKOM UNPAM</a>
+                        <p>- Wordpress</p>
+                    </li>
+                    <li><a href="" style="pointer-events: ;">TADRIS</a>
+                        <p>- OJS</p>
+                    </li>
+                    <li><a href="" style="pointer-events: ;">ABDI RELIGIA</a>
+                        <p>- OJS</p>
+                    </li>
+                    <li><a href="" style="pointer-events: ;">PIE</a>
+                        <p>- OJS</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -165,10 +228,15 @@
         </nav>
         <div class="myskills myce">
             <h2>MY SKILLS</h2>
-            <ul>
+            <ul style="display: grid; gap: 0.5em;">
+                <li>
+                    <h3>UI/UX Design</h3>
+                    <p>Tools: Figma</p>
+                </li>
                 <li>
                     <h3>FRONT-END WEBSITE DEVELOPER</h3>
                     <p>Language: HTML/CSS, JavaScript, Bootstrap</p>
+                    <p>CMS: Wordpress, OJS</p>
                     <p>Tools: VsCode, Git, GitHub</p>
                 </li>
             </ul>
@@ -195,13 +263,15 @@
             <p class="pjustify">For questions, business, and collaborations please contact me below. I'm waiting for
                 your questions.</p>
             <p>
-                Email: <a href="mailto:fatahabdilahh@gmail.com" target="_blank">fatahabdilahh@gmail.com</a>
+                Email: <a href="mailto:fatahabdilahh@gmail.com" target="_blank"
+                    class="linkbiru">fatahabdilahh@gmail.com</a>
                 <br>
-                On the Internet: <a href="https://www.linkedin.com/in/fatahabdilah/" target="_blank">LinkedIn</a>
+                On the Internet: <a href="https://www.linkedin.com/in/fatahabdilah/" target="_blank"
+                    class="linkbiru">LinkedIn</a>
                 /
-                <a href="https://github.com/fatahabdilah" target="_blank">Github</a>
+                <a href="https://github.com/fatahabdilah" target="_blank" class="linkbiru">Github</a>
                 /
-                <a href="https://www.instagram.com/fatahabdilahhh/" target="_blank">Instagram</a>
+                <a href="https://www.instagram.com/fatahabdilahhh/" target="_blank" class="linkbiru">Instagram</a>
             </p>
         </div>
     </section>

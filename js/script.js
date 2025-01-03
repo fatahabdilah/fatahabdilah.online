@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
+            setTimeout(() => {
+                targetSection.style.setProperty('--before-height', '300px');
+            },); // Sedikit delay untuk memicu transisi
             targetSection.style.display = "grid";
             setTimeout(() => {
                 targetSection.style.top = "0";
@@ -54,10 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (span && span.tagName === 'SPAN') {
                 span.style.width = "100%";
             }
+
+
             setTimeout(() => {
                 document.body.style.overflow = 'visible';
                 document.querySelectorAll('section').forEach(section => {
                     section.style.top = "100%";
+                    section.style.setProperty('--before-height', '0px');
                 });
             }, 400);
             setTimeout(() => {
